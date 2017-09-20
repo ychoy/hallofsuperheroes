@@ -24,9 +24,15 @@ const HEROES: Hero[] = [
   styleUrls: ['./app.component.css']
 })
 
+/*add click handler to expose selected hero. SelectedHero property won't initialize until user picks a hero */
+/*onSelect() method selects the SelectedHero property to the hero that the user clicks */
 export class AppComponent {
   title = 'Hall of Super Heroes';
   heroes = HEROES;
+  selectedHero: Hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  } 
 }
 
 
