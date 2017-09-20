@@ -12,7 +12,7 @@ export class Hero {
 })
 
 export class AppComponent {
-  title = 'Hall of Superheroes';
+  title = 'Hall of Super Heroes';
   hero: Hero = {
     id: 1,
     name: 'Jessica Jones'
