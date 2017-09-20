@@ -14,13 +14,7 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-<!-- hide empty detail with ngIf. When app loads, selectedHero is undefined. It's initialized when user clicks her's name. --> 
- <div *ngIf="selectedHero">
-  <h2>{{selectedHero.name}} details!</h2>
-  <div><label>id: </label>{{selectedHero.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-  </div>
-</div>
 
+<!-- Display by binding selectedHero to the hero property of HeroComponent -->
+
+<hero-detail [hero]="selectedHero"></hero-detail>
