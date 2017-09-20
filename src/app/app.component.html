@@ -5,10 +5,9 @@
   </h1>
 </div>
 <br/>
-<h2> {{hero.name}}: </h2>
-<div><label>id: </label>{{hero.id}}</div>
-<div>
-  <label>name: </label>
-  <!-- Two-way data bidning using ngModel directive, which display's hero's name and allows users to change it. -->
-  <input [(ngModel)]="hero.name" placeholder="name">
-</div>
+<ul class="heroes">
+  <!-- ngFor directive iterates over component's heroes and renders instance of this template for each hero in array --> 
+  <li *ngFor="let hero of heroes">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
