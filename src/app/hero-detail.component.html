@@ -1,0 +1,10 @@
+<!-- hide empty detail with ngIf. When app loads, selectedHero is undefined. It's initialized when user clicks her's name. -->
+
+<div *ngIf="hero">
+  <h2>{{hero.name}}:</h2>
+  <div><label>id: </label>{{hero.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </div>
+</div>
