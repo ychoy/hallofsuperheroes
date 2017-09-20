@@ -5,6 +5,19 @@ export class Hero {
   name: string;
 }
 
+const HEROES: Hero[] = [
+  { id: 1, name: 'Jessica Jones' },
+  { id: 2, name: 'Luke Cage' },
+  { id: 3, name: 'Misty Knight' },
+  { id: 4, name: 'America Chavez' },
+  { id: 5, name: 'Kamala Khan' },
+  { id: 6, name: 'Miles Morales' },
+  { id: 7, name: 'Colleen Wing' },
+  { id: 8, name: 'Supergirl' },
+  { id: 9, name: 'Storm' },
+  { id: 10, name: 'Jubilee' }
+];
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,9 +26,7 @@ export class Hero {
 
 export class AppComponent {
   title = 'Hall of Super Heroes';
-  hero: Hero = {
-    id: 1,
-    name: 'Jessica Jones'
-  };
+  heroes = HEROES;
 }
+
 
